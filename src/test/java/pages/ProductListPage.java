@@ -21,6 +21,9 @@ public class ProductListPage {
     @FindBy(xpath = "//span[@class='shopping_cart_badge']")
     private WebElement cartBadge;
 
+    @FindBy(className = "shopping_cart_link")
+    private WebElement cartLink;
+
     private WebDriver driver;
 
     public ProductListPage(WebDriver driver) {
@@ -39,6 +42,12 @@ public class ProductListPage {
 
     public WebElement getCartBadge() {
         return cartBadge;
+    }
+
+    public CartPage getCartPage(){
+        cartLink.click();
+        return new CartPage(driver);
+
     }
 
 }
