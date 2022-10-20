@@ -10,6 +10,17 @@ public class ProductListPage {
     @FindBy(xpath = "//span[text()='Products']")
     private WebElement productsHeader;
 
+
+    //do sprawdzenia że jest 6 produktów
+    @FindBy(xpath = "//div[@class='inventory_item']")
+    private WebElement listOfProducts;
+
+    @FindBy(id= "add-to-cart-sauce-labs-backpack")
+    private WebElement addToCartButton;
+
+    @FindBy(xpath = "//span[@class='shopping_cart_badge']")
+    private WebElement cartBadge;
+
     private WebDriver driver;
 
     public ProductListPage(WebDriver driver) {
@@ -20,4 +31,14 @@ public class ProductListPage {
     public WebElement getProductsHeader() {
         return productsHeader;
     }
+
+    public ProductListPage addToCart(){
+        addToCartButton.click();
+        return this;
+    }
+
+    public WebElement getCartBadge() {
+        return cartBadge;
+    }
+
 }

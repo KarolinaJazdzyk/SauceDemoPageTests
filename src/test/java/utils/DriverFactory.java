@@ -9,5 +9,6 @@ public class DriverFactory {
     public static WebDriver getDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
+
     }
 }
