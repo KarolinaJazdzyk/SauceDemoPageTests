@@ -17,4 +17,5 @@ public class AddToCartTest extends BaseTest {
 
         Assert.assertEquals(cartBadge.getText(), "1");
     }
+
 }

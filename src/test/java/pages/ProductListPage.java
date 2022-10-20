@@ -1,9 +1,12 @@
 package pages;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class ProductListPage {
 
@@ -12,8 +15,8 @@ public class ProductListPage {
 
 
     //do sprawdzenia że jest 6 produktów
-    @FindBy(xpath = "//div[@class='inventory_item']")
-    private WebElement listOfProducts;
+   // List<WebElement> products= driver.findElements("//div[@class='inventory_item']");
+
 
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement addToCartButton;
