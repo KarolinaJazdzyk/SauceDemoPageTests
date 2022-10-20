@@ -7,16 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CustomerInformationPage {
 
-    @FindBy(id="first-name")
+    @FindBy(id = "first-name")
     private WebElement firstNameInput;
 
-    @FindBy(id="last-name")
+    @FindBy(id = "last-name")
     private WebElement lastNameInput;
 
-    @FindBy(id="postal-code")
+    @FindBy(id = "postal-code")
     private WebElement postalCodeInput;
 
-    @FindBy(id="continue")
+    @FindBy(id = "continue")
     private WebElement continueButton;
 
 
@@ -27,26 +27,26 @@ public class CustomerInformationPage {
         this.driver = driver;
     }
 
-    public CustomerInformationPage setFirstName (String firstName){
+    public CustomerInformationPage setFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
         return this;
     }
 
-    public CustomerInformationPage setLastName (String lastName){
+    public CustomerInformationPage setLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
         return this;
     }
 
-    public CustomerInformationPage setPostalCode (String postalCode){
+    public CustomerInformationPage setPostalCode(String postalCode) {
         postalCodeInput.sendKeys(postalCode);
         return this;
     }
 
-    public OverviewPage clickContinue(){
+    public OverviewPage clickContinue() {
         continueButton.click();
         return new OverviewPage(driver);
     }
 
 
-    }
+}
 

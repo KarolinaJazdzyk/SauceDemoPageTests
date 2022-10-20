@@ -15,7 +15,7 @@ public class ProductListPage {
     @FindBy(xpath = "//div[@class='inventory_item']")
     private WebElement listOfProducts;
 
-    @FindBy(id= "add-to-cart-sauce-labs-backpack")
+    @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement addToCartButton;
 
     @FindBy(xpath = "//span[@class='shopping_cart_badge']")
@@ -35,7 +35,7 @@ public class ProductListPage {
         return productsHeader;
     }
 
-    public ProductListPage addToCart(){
+    public ProductListPage addToCart() {
         addToCartButton.click();
         return this;
     }
@@ -44,7 +44,7 @@ public class ProductListPage {
         return cartBadge;
     }
 
-    public CartPage getCartPage(){
+    public CartPage getCartPage() {
         cartLink.click();
         return new CartPage(driver);
 
